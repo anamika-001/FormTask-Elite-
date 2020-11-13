@@ -30,17 +30,7 @@
            <!--  Age:<input type="text" id="age"> -->
               
              <div class="g-recaptcha" data-sitekey="<?php echo "6Leba-IZAAAAAM_AQUmocYuYPD2ZOjMT7NIMkJB8" ?>"></div>
-              <?php //reCAPTCHA validation
-             if (isset($_POST['g-recaptcha-response'])) {
-                 require('src/autoload.php');        
-                 $recaptcha = new \ReCaptcha\ReCaptcha("6Leba-IZAAAAAM_AQUmocYuYPD2ZOjMT7NIMkJB8");
-                 $resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
-                 if (!$resp->isSuccess()) {
-                          $output = json_encode(array('type'=>'error', 'text' => '<b>Captcha</b> Validation Required!'));
-                          die($output);               
-                    } 
-              }
-             ?>
+             
              <br>
               <div class="text-center">
                   <button class="btn submit" name="submit" id="submitBtn" type="submit" >SUBMIT <span class="fa fa-arrow-right"></span></button>
