@@ -26,8 +26,8 @@
               <input type="Phone" name="contact" id="contact" class="form-control form-rounded" placeholder="contact number" required=""><br>
 
               <label for="dob"> DOB </label>
-              <input type="text" name="dob" id="dob" class="form-control form-rounded"  placeholder="dd-mm-yyyy" required="" onblur ="ageCount()">  <br>
-            <!--  // Age:<input type="text" id="age"> -->
+              <input type="text" name="dob" id="dob" class="form-control form-rounded"  placeholder="dd-mm-yyyy" required="">  <br>
+           <!--  Age:<input type="text" id="age"> -->
               
              <div class="g-recaptcha" data-sitekey="<?php echo "6Leba-IZAAAAAM_AQUmocYuYPD2ZOjMT7NIMkJB8" ?>"></div>
               <?php //reCAPTCHA validation
@@ -59,6 +59,7 @@
    
     <script src="jquery/jquery-ui.js"></script>
      <script src="jquery/jquery.js"></script>
+     <script src="jquery/jquery-3.5.1.min.js"></script>
 
   <!-- Recaptcha
    -->
@@ -72,6 +73,8 @@
           age =today.getFullYear()- ui.selectedYear;
           $('#age').val(age);
         },
+        changeMpnth:true,
+        changeYear:true
       })
      }
   </script>
